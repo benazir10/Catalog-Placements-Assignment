@@ -14,10 +14,15 @@ This model ensures **precise and adaptable thyroid condition predictions** by le
 
 ## **Key Features**
 ✅ **Hybrid Model Selection:** EUses multiple ML models for precise classification.
-✅ **BOOST Balancing Method:** Combines **SMOTE, Tomek Links, and AdaBoost** to handle imbalanced datasets 
+
+✅ **BOOST Balancing Method:** Combines **SMOTE, Tomek Links, and AdaBoost** to handle imbalanced datasets.
+
 ✅ **Dynamic Selection Mechanism:** Selects the best-performing models based on **PFI scores**.
+
 ✅ **Secure User Authentication:** Allows registration and login for users.
+
 ✅ **User-Friendly Interface:** Web-based application for **uploading patient data and obtaining predictions.**
+
 ✅ **Thyroid Disorder Prediction:** Detects **Hyperthyroid and Hypothyroid conditions** with high accuracy
 
 ---
@@ -124,17 +129,25 @@ pip install SpeechRecognition
 
 ## **Benefits**
 ✔ **Higher Accuracy** –Hybrid models improve prediction reliability.
+
 ✔ **Improved Diagnosis** – Machine learning techniques enhance medical assessments.
+
 ✔ **Better Data Handling** – Addresses class imbalance for fair predictions.
+
 ✔ **Scalable Solution** – Can be adapted for other medical conditions.
 
 ---
 
 ## **Contributors**  
-**Team B10, Shri Vishnu Engineering College for Women (SVECW)**  
+**Team B6, Shri Vishnu Engineering College for Women (SVECW)**  
+
 👩‍💻 **Md. Benazir Fathima**     - 21B01A05A8  
+
 👩‍💻 **N. Neha**     - 21B01A05B3
+
 👩‍💻 **N. Sai Ramya Sri** - 21B01A05B4
+
 👩‍💻 **N. Lakshmi Priya**    - 21B01A05B9 
+
 👩‍💻 **O. Pranathi Sudha**       - 21B01A05C7
 
