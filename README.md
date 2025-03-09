@@ -55,6 +55,7 @@ pip install scikit-learn
 pip install pandas numpy seaborn
 pip install tensorflow
 pip install xgboost
+pip install catboost 
 pip install matplotlib
 ```
 
