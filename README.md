@@ -36,17 +36,6 @@ This model ensures **precise and adaptable thyroid condition predictions** by le
 - **Server Deployment:** XAMPP Server
 ---
 
-### **3. Install Dependencies**
-```sh
-pip install flask
-pip install scikit-learn
-pip install pandas numpy seaborn
-pip install tensorflow
-pip install xgboost
-pip install matplotlib
-```
----
-
 ## **Installation & Setup**
 
 ### **1. Clone the Repository**
@@ -61,68 +50,59 @@ cd <repository_folder>
 
 ### **3. Install Dependencies**
 ```sh
-pip install streamlit 
-pip install mysql-connector-python
-pip install PyPDF2
-pip install python-docx
-pip install google-generativeai
-pip install python-dotenv
-pip install pydub
-pip install SpeechRecognition
+pip install flask
+pip install scikit-learn
+pip install pandas numpy seaborn
+pip install tensorflow
+pip install xgboost
+pip install matplotlib
 ```
 
 ### **4. Install & Configure XAMPP server**
 1. Download **XAMPP** from [here](https://www.apachefriends.org/download.html)
-2. Open it and do the installation setup
+2. Open it and complete the installation setup.
 
 ### **5. Installing required dependencies for frontend**
-1. Go the project folder and select **FRONTEND** folder.
-2. In the path click cmd 
-3. From cmd write command as
+1. Go the project folder and Navigate to the **FRONTEND** folder.
+2. Open the command prompt in the FRONTEND folder and run
    ```sh
    code .
    ```
-4. Then we navigate to **VS Code** in which select **app.py** file.
-5. Click **Terminal** → **New Terminal**
-6. Check whether **miniconda** is dowloaded in your system or not by using the command 
+3. Open **VS Code**, select **app.py**, and open a new terminal.
+4. Check if **Miniconda** is installed:
    ```sh
    conda -version
    ```
-7. If error the run the command
+5. If not installed, run:
    ```sh
    conda create -n env python==3.10.14
    ```
-8. By running above command we get all the required libraries.
-
-### **7. Run the Application**
-1. Open **XAMPP** server.
-2. Start **Apache** and **MySQL** and in **MySQL** section click **Admin**.
-3. Then A new Window will open in which from header bar click **Import**
-4. Then There will be an option to upload a file where you have to upload your **db.sql** database file present in **FRONTEND** folder
-3. Now go the **FRONTEND** folder from your project File Explorer
-4. Type **cmd** and 
-5. Run the command as 
-   ```sh
-   code .
-   ```
-4. Then we navigate to **VS Code** in which select **app.py** file.
-5. Click **Terminal** → **New Terminal**
-6. Run command as 
+6. Activate the environment:
    ```sh
    conda activate env
    ```
-7. Write command 
-    ```sh
+### **6.Set Up MySQL Database**
+1. Open **XAMPP** server.
+2. Start **Apache** and **MySQL** services.
+3. In the **MySQL** section, click **Admin**, which opens **phpMyAdmin**.
+4. Click **Import** and upload the **db.sql** file from the **FRONTEND** folder.
+
+### **7. Run the Application**
+1. Open the **FRONTEND** folder in **VS Code**.
+2. Open a new terminal and run:
+   ```sh
+   conda activate env
+   ```
+3. Start the application:
+   ```sh
    python app.py
    ```
-8. Then you will get a **localhost URL** click on that
-9. Our application will start running.
 ---
 
 ## **Output & Usage**
 1. **Login/Register** to access the platform.
-2. Give the inputs of a Patient data
-3. Click on **Submit**
+2. Enter patient data.
+3. Click **Submit**
 4. We will finally get the Severeity of a tyroid disorder
 
 ---
