@@ -1,36 +1,45 @@
-# **Deep Learning Note-Taking Web Application With CNN and NLP for Handwritten & Voice Notes**
+# **Dynamic Selection Hybrid Model for Advancing Thyroid Care With BOOST Balancing Method**
 
 ### **Overview**
-The **Unified AI Platform** is a **Streamlit-based AI-powered web application** that enables:
-- **Text Extraction** from documents.
-- **Handwriting Recognition** using AI.
-- **Speech-to-Text Conversion** from audio files.
-- **AI-Powered Q&A** using Google Gemini AI.
 
-It integrates **NLP and CNN models** for processing documents, handwritten text, and audio files, making it an efficient tool for digital note-taking and AI-driven analysis.
+The **Dynamic Selection Hybrid Model** is a **machine learning-driven system** designed to enhance **thyroid disorder diagnosis** by integrating **machine learning, deep learning, and balancing techniques.**
 
-Current note-taking apps lack these integrated features, as they are usually scattered across different tools rather than unified in a single platform.
+- Addresses **class imbalances** using **BOOST balancing methods** to ensure **higher accuracy, adaptability, and reliability.**
+- Dynamically selects the **most efficient classifiers** based on **Permutation Feature Importance (PFI) and ensemble techniques.**
+- Optimizes diagnosis for both **Hyperthyroid** and **Hypothyroid** disorders.
+
+This model ensures **precise and adaptable thyroid condition predictions** by leveraging a **hybrid selection approach** for classifier optimization.
 
 ---
 
 ## **Key Features**
-✅ **Text Extraction:** Extracts text from **PDFs, DOCX, and TXT** into an editable format.  
-✅ **Handwriting Recognition:** Converts handwritten text images into editable text using the **Google Gemini API**.  
-✅ **Speech-to-Text:** Converts **MP3 and WAV** files into text using **SpeechRecognition & Pydub**.  
-✅ **AI Chatbot:** Answers queries based on extracted text using **Google Gemini AI**.  
-✅ **User Authentication:** Secure login and registration using **MySQL & SHA-256 password hashing**.  
-✅ **Interactive UI:** Built with **Streamlit** for real-time user interaction.
+✅ **Hybrid Model Selection:** EUses multiple ML models for precise classification.
+✅ **BOOST Balancing Method:** Combines **SMOTE, Tomek Links, and AdaBoost** to handle imbalanced datasets 
+✅ **Dynamic Selection Mechanism:** Selects the best-performing models based on **PFI scores**.
+✅ **Secure User Authentication:** Allows registration and login for users.
+✅ **User-Friendly Interface:** Web-based application for **uploading patient data and obtaining predictions.**
+✅ **Thyroid Disorder Prediction:** Detects **Hyperthyroid and Hypothyroid conditions** with high accuracy
 
 ---
 
 ## **Tech Stack**
-- **Programming Language:** Python 3.8+
-- **Framework:** Streamlit
+- **Programming Language:** Python, HTML, CSS, Bootstrap, JavaScript
+- **Framework:** Flask
 - **Database:** MySQL Server
-- **Libraries:** PyPDF2, SpeechRecognition, Pydub, PIL, docx, google.generativeai
-- **AI Model:** Google Gemini API
-- **Authentication:** SHA-256 password hashing
+- **Libraries:** Flask, Pandas, MySQL-Connector, Scikit-learn, NumPy
+- **Dataset Source:** Thyroid Case Dataset from Kaggle
+- **Server Deployment:** XAMPP Server
+---
 
+### **3. Install Dependencies**
+```sh
+pip install flask
+pip install scikit-learn
+pip install pandas numpy seaborn
+pip install tensorflow
+pip install xgboost
+pip install matplotlib
+```
 ---
 
 ## **Installation & Setup**
@@ -57,74 +66,75 @@ pip install pydub
 pip install SpeechRecognition
 ```
 
-### **4. Install & Configure FFMPEG (for audio processing)**
-1. Download **FFMPEG v7.1** from [here](https://github.com/GyanD/codexffmpeg/releases/download/7.1/ffmpeg-7.1-essentials_build.zip)
-2. Create a folder named `FFMPEG` and extract the files inside your project directory.
-3. Set **Environment Variables**:
+### **4. Install & Configure XAMPP server**
+1. Download **XAMPP** from [here](https://www.apachefriends.org/download.html)
+2. Open it and do the installation setup
 
-   - Copy and add the following paths to System **Environment Variables**:
-   ```
-   C:\Users\<......>\Path\to\ffmpeg
-   C:\Users\<......>\Path\to\ffmpeg\bin
-   ```
-
-### **5. Set Up API Key for Google Gemini AI**
-1. Visit [Google AI Studio](https://aistudio.google.com/prompts/new_chat) and log in.
-2. Generate an **API Key** (Get API key -> Create API key -> Copy and paste in "env" file).
-3. In the `.env` file in the project directory add:
+### **5. Installing required dependencies for frontend**
+1. Go the project folder and select **FRONTEND** folder.
+2. In the path click cmd 
+3. From cmd write command as
    ```sh
-   GOOGLE_API_KEY="your_google_api_key"
+   code .
    ```
-
-### **6. Set Up MySQL Database**
-#### **a. Install MySQL & SQLyog Community**
-- Reference Video **MYSQL WorkBench**: [YouTube](https://youtu.be/xvUW3kF2GzI?si=p17FCXGKb2wtUEp3)
-- Download **MySQL WorkBench**: [Download Link](https://dev.mysql.com/downloads/file/?id=536787)
-
-**b. Configure MySQL User By Executing The Query**
-    
-    ```sh
-        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
-        FLUSH PRIVILEGES;  -- (Ignore if it gives an error)
-    ```
-    
- **c. Install & Set Up SQLyog Community**
-  
-  - Install **SQLyog Community**: [Setup Guide](https://youtu.be/M-Dlly5v5lo)
-  - Copy the SQL script from `db.sql` and execute it in **SQLyog Community** to create the database and users table.
-  - If you set a password while installing the MYSQL, then use the same password in connecting and modify the password in the project code. 
+4. Then we navigate to **VS Code** in which select **app.py** file.
+5. Click **Terminal** → **New Terminal**
+6. Check whether **miniconda** is dowloaded in your system or not by using the command 
+   ```sh
+   conda -version
+   ```
+7. If error the run the command
+   ```sh
+   conda create -n env python==3.10.14
+   ```
+8. By running above command we get all the required libraries.
 
 ### **7. Run the Application**
-```sh
-python -m streamlit run app2.py
-```
-
+1. Open **XAMPP** server.
+2. Start **Apache** and **MySQL** and in **MySQL** section click **Admin**.
+3. Then A new Window will open in which from header bar click **Import**
+4. Then There will be an option to upload a file where you have to upload your **db.sql** database file present in **FRONTEND** folder
+3. Now go the **FRONTEND** folder from your project File Explorer
+4. Type **cmd** and 
+5. Run the command as 
+   ```sh
+   code .
+   ```
+4. Then we navigate to **VS Code** in which select **app.py** file.
+5. Click **Terminal** → **New Terminal**
+6. Run command as 
+   ```sh
+   conda activate env
+   ```
+7. Write command 
+    ```sh
+   python app.py
+   ```
+8. Then you will get a **localhost URL** click on that
+9. Our application will start running.
 ---
 
 ## **Output & Usage**
 1. **Login/Register** to access the platform.
-2. Verify user registration in **SQLyog Community** using:
-   ```sql
-   USE chatbot;
-   SELECT * FROM Users;
-   ```
-3. **Upload Files** (PDF, DOCX, TXT, Images, or Audio) from the **Home Menu**.
-4. **Interact with AI Chatbot** using extracted text.
+2. Give the inputs of a Patient data
+3. Click on **Submit**
+4. We will finally get the Severeity of a tyroid disorder
 
 ---
 
 ## **Benefits**
-✔ **Saves Time** – Eliminates manual transcription and human effort.  
-✔ **Accurate & Context-Aware** – AI ensures high precision.  
-✔ **Boosts Productivity** – Quick and efficient for meetings, lectures, and reports.  
+✔ **Higher Accuracy** –Hybrid models improve prediction reliability.
+✔ **Improved Diagnosis** – Machine learning techniques enhance medical assessments.
+✔ **Better Data Handling** – Addresses class imbalance for fair predictions.
+✔ **Scalable Solution** – Can be adapted for other medical conditions.
 
 ---
 
 ## **Contributors**  
 **Team B10, Shri Vishnu Engineering College for Women (SVECW)**  
-👩‍💻 **P. Saranya**     - 21B01A05C8  
-👩‍💻 **R. Sravani**     - 22B05A0511  
-👩‍💻 **K. Charmy Rose** - 21B01A0580  
-👩‍💻 **K. Sathvika**    - 21B01A0567  
-👩‍💻 **R. Satya**       - 22B05A0512  
+👩‍💻 **Md. Benazir Fathima**     - 21B01A05A8  
+👩‍💻 **N. Neha**     - 21B01A05B3
+👩‍💻 **N. Sai Ramya Sri** - 21B01A05B4
+👩‍💻 **N. Lakshmi Priya**    - 21B01A05B9 
+👩‍💻 **O. Pranathi Sudha**       - 21B01A05C7
 
